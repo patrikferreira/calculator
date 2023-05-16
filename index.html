@@ -9,37 +9,37 @@
 </head>
 <body>
     <div id="container">
-        <input type="text" id="display">
+        <input type="text" id="display" disabled>
 
         <div class="buttons">
-            <button>AC</button>
-            <button>DEL</button>
-            <button>%</button>
-            <button>/</button>
+            <button value="AC" id="clear">AC</button>
+            <button value="DEL" id="delete">DEL</button>
+            <button value="%" class="val">%</button>
+            <button value="/" class="val">/</button>
         </div>
         <div class="buttons">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>X</button>
+            <button value="7" class="val">7</button>
+            <button value="8" class="val">8</button>
+            <button value="9" class="val">9</button>
+            <button value="*" class="val">X</button>
         </div>
         <div class="buttons">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
+            <button value="4" class="val">4</button>
+            <button value="5" class="val">5</button>
+            <button value="6" class="val">6</button>
+            <button value="-" class="val">-</button>
         </div>
         <div class="buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
+            <button value="1" class="val">1</button>
+            <button value="2" class="val">2</button>
+            <button value="3" class="val">3</button>
+            <button value="+" class="val">+</button>
         </div>
         <div class="buttons">
-            <button>0</button>
-            <button>00</button>
-            <button>,</button>
-            <button>=</button>
+            <button value="0" class="val">0</button>
+            <button value="00" class="val">00</button>
+            <button value="." class="val">.</button>
+            <button value="=" id="equation">=</button>
         </div>
     </div>
     <script src="./dist/index.js"></script>
