@@ -25,7 +25,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
 }
 
 #display, .buttons {
@@ -55,9 +54,19 @@ body {
     border-radius: 50%;
     border: none;
     font-size: 18px;
-    background-color: #eee;
-    color: #000e1a;
+    background-color: #959595;
+    color: #ffffff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+#val-zero {
+    width: 120px;
+    border-radius: 25px;
+}
+
+.first-row button {
+    background-color: #e5e5e5;
+    color: #000e1a;
 }
 
 .buttons button:active {
