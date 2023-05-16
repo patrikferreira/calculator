@@ -1,20 +1,22 @@
 "use strict";
 const output = document.getElementById('display');
-const valE1 = document.querySelectorAll('.val');
-const clear = document.getElementById('clear');
-const deleteE = document.getElementById('delete');
-const equation = document.getElementById('equation');
-valE1.forEach((val) => {
+const valBtn = document.querySelectorAll('.val');
+const clearBtn = document.getElementById('clear');
+const deleteBtn = document.getElementById('delete');
+const equationBtn = document.getElementById('equation');
+valBtn.forEach((val) => {
     val.addEventListener('click', () => {
         output.value += val.value;
     });
 });
-equation.addEventListener('click', () => {
+equationBtn.addEventListener('click', () => {
+    if (output.value === "")
+        return;
     output.value = eval(output.value.replace("%", "/1"));
 });
-clear.addEventListener('click', () => {
+clearBtn.addEventListener('click', () => {
     output.value = "";
 });
-deleteE.addEventListener('click', () => {
+deleteBtn.addEventListener('click', () => {
     output.value = output.value.slice(0, -1);
 });

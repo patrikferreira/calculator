@@ -1,23 +1,25 @@
 const output: HTMLInputElement = document.getElementById('display') as HTMLInputElement;
-const valE1: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.val');
-const clear: HTMLButtonElement = document.getElementById('clear') as HTMLButtonElement;
-const deleteE: HTMLButtonElement = document.getElementById('delete') as HTMLButtonElement;
-const equation: HTMLButtonElement = document.getElementById('equation') as HTMLButtonElement;
+const valBtn: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.val');
+const clearBtn: HTMLButtonElement = document.getElementById('clear') as HTMLButtonElement;
+const deleteBtn: HTMLButtonElement = document.getElementById('delete') as HTMLButtonElement;
+const equationBtn: HTMLButtonElement = document.getElementById('equation') as HTMLButtonElement;
 
-valE1.forEach((val) => {
+
+valBtn.forEach((val) => {
     val.addEventListener('click', () => {
         output.value += val.value;
     })
 });
 
-equation.addEventListener('click', () => {
+equationBtn.addEventListener('click', () => {
+    if(output.value === "") return;
     output.value = eval(output.value.replace("%", "/1"));
 })
 
-clear.addEventListener('click', () => {
+clearBtn.addEventListener('click', () => {
     output.value = "";
 })
 
-deleteE.addEventListener('click', () => {
+deleteBtn.addEventListener('click', () => {
     output.value = output.value.slice(0, -1);
 })
